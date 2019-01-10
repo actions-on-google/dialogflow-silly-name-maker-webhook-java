@@ -26,8 +26,7 @@ import org.slf4j.LoggerFactory;
 
 public class SillyNameMakerApp extends DialogflowApp {
 
-  private static final Logger LOGGER =
-      LoggerFactory.getLogger(SillyNameMakerApp.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(SillyNameMakerApp.class);
 
   // Note: Do not store any state as an instance variable.
   // It is ok to have final variables where the variable is assigned a value in
@@ -38,8 +37,12 @@ public class SillyNameMakerApp extends DialogflowApp {
   @ForIntent("make_name")
   public ActionResponse make_name(ActionRequest request) {
     LOGGER.info("make_name start.");
-    String response = "Alright, your silly name is "
-            + request.getParameter("color") +  " "  + request.getParameter("number") + "! "
+    String response =
+        "Alright, your silly name is "
+            + request.getParameter("color")
+            + " "
+            + request.getParameter("number")
+            + "! "
             + "I hope you like it. See you next time.";
     ResponseBuilder responseBuilder = getResponseBuilder(request).add(response).endConversation();
     ActionResponse actionResponse = responseBuilder.build();
