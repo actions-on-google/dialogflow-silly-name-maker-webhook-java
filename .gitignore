@@ -1,7 +1,8 @@
-.idea
-*.class
+.gradle/
+.idea/
+build/
+gradle/
 gradlew
 gradlew.bat
-gradle/
-build/
-.gradle/
+out/
+.DS_Store
