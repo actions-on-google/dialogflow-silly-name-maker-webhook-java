@@ -37,13 +37,14 @@ public class SillyNameMakerApp extends DialogflowApp {
   @ForIntent("make_name")
   public ActionResponse make_name(ActionRequest request) {
     LOGGER.info("make_name start.");
+    Double number = (Double) request.getParameter("number");
     String response =
         "Alright, your silly name is "
             + request.getParameter("color")
             + " "
-            + request.getParameter("number")
-            + "! "
-            + "I hope you like it. See you next time.";
+            + (number % 1 == 0 ? Integer.toString(number.intValue()) : number)
+            + "! I hope you like it. See you next time.";
+
     ResponseBuilder responseBuilder = getResponseBuilder(request).add(response).endConversation();
     ActionResponse actionResponse = responseBuilder.build();
     LOGGER.info(actionResponse.toString());
