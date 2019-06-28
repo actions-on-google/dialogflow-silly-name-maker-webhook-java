@@ -1,10 +1,10 @@
 # Actions on Google: Silly Name Maker Sample
 
-Basic sample featuring introductory concepts and returns a generated name based on color and a number.
+Sample featuring introductory concepts (e.g. parameters) and returns a generated name based on color and a number.
 
 This sample demonstrates Actions on Google features for use on Google Assistant including parameters and system entities -- using the [Java client library](https://github.com/actions-on-google/actions-on-google-java) and deployed on [App Engine](https://cloud.google.com/appengine/docs/standard/java/quickstart).
 
-gst### Setup Instructions
+### Setup Instructions
 ### Prerequisites
 1. Download & install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/)
 1. [Gradle with App Engine Plugin](https://cloud.google.com/appengine/docs/flexible/java/using-gradle)
@@ -14,8 +14,8 @@ gst### Setup Instructions
 
 ### Configuration
 #### Actions Console
-1. From the [Actions on Google Console](https://console.actions.google.com/), add a new project (this will become your *Project ID*) > **Create Project** > under **More options** > **Conversational**.
-1. From the left navigation menu under **Build** > **Actions** > **Add Your First Action** > **BUILD** (this will bring you to the Dialogflow console) > Select language and time zone > **CREATE**.
+1. From the [Actions on Google Console](https://console.actions.google.com/), New project (this will become your *Project ID*) > **Create project** > under **More options** > **Conversational**.
+1. From the top menu under **Develop** > **Actions** (left nav) > **Add your first action** > **BUILD** (this will bring you to the Dialogflow console) > Select language and time zone > **CREATE**.
 1. In Dialogflow, go to **Settings** ⚙ > **Export and Import** > **Restore from zip**.
    + Follow the directions to restore from the `agent.zip` file in this repo.
 
